@@ -65,7 +65,7 @@ Please confirm delivery availability.
 Thank you.
 `;
 
-  const phoneNumber = "8639098197";
+  const phoneNumber = "919063652749";
 
   const encodedMessage = encodeURIComponent(message);
 
