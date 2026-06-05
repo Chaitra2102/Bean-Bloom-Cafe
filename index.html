@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean & Bloom Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+
+  <div class="logo">
+    <img src="images/logo.png" alt="Bean & Bloom Café Logo">
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</nav>
+
+  <section class="hero">
+   <div class="hero-content">
+
+  <h2>Where Every Cup Feels Like Home</h2>
+
+  <p>
+    Premium Coffee • Artisan Bakery • Cozy Workspace
+  </p>
+
+  <p class="hero-note">
+    Now accepting table reservations and online delivery orders through WhatsApp.
+  </p>
+
+  <a href="#menu" class="btn">Explore Menu</a>
+
+  <a href="#contact" class="btn secondary-btn">
+    Visit Us
+  </a>
+
+</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+
+    <p>
+      Bean & Bloom Café is a cozy neighborhood café serving premium coffee,
+      fresh pastries, and delightful moments every day. Whether you're stopping
+      by for your morning espresso, meeting a friend, or working remotely,
+      our café offers the perfect blend of comfort and flavor.
+    </p>
+  </section>
+
+  <section id="features">
+
+  <h2>Why Choose Bean & Bloom?</h2>
+
+  <div class="features-container">
+
+    <div class="feature-card">
+      <h3>☕ Premium Coffee</h3>
+      <p>Freshly roasted beans sourced from trusted farms.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🥐 Fresh Bakery</h3>
+      <p>Handcrafted pastries baked fresh every day.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🌿 Cozy Atmosphere</h3>
+      <p>Perfect place for work, meetings, and relaxation.</p>
+    </div>
+
+  </div>
+
+</section>
+   <section id="menu">
+
+<h2>Our Popular Menu</h2>
+<p style="text-align:center; margin-bottom:30px;">
+☕ Coffee & Beverages | 🥐 Bakery | 🍔 Snacks | 🍝 Meals | 🍰 Desserts
+</p>
+
+<div class="menu-container">
+
+<div class="card">
+  <h3>Espresso</h3>
+  <p>Strong and rich coffee shot.</p>
+  <span>₹149</span>
+  <button onclick="addToCart('Espresso', 149)">Add to Cart</button>
+</div>
+
+<div class="card">
+<h3>Cappuccino</h3>
+<p>Classic coffee with steamed milk.</p>
+<button onclick="addToCart('Cappuccino', 199)">Add to Cart</button>
+<span>₹199</span>
+</div>
+
+<div class="card">
+<h3>Latte</h3>
+<p>Creamy milk blended coffee.</p>
+<button onclick="addToCart('Latte', 229)">Add to Cart</button>
+<span>₹229</span>
+</div>
+
+<div class="card">
+<h3>Mocha</h3>
+<p>Coffee infused with chocolate.</p>
+<button onclick="addToCart('Mocha', 249)">Add to Cart</button>
+<span>₹249</span>
+</div>
+
+<div class="card">
+<h3>Cold Coffee</h3>
+<p>Refreshing chilled coffee.</p>
+<button onclick="addToCart('Cold Coffee', 199)">Add to Cart</button>
+<span>₹199</span>
+</div>
+
+<div class="card">
+<h3>Blueberry Muffin</h3>
+<p>Fresh baked muffin.</p>
+<button onclick="addToCart('Blueberry Muffin', 149)">Add to Cart</button>
+<span>₹149</span>
+</div>
+
+<div class="card">
+<h3>Chocolate Croissant</h3>
+<p>Buttery flaky pastry.</p>
+<button onclick="addToCart('Chocolate Croissant', 179)">Add to Cart</button>
+<span>₹179</span>
+</div>
+
+<div class="card">
+<h3>Cheese Sandwich</h3>
+<p>Toasted sandwich with cheese.</p>
+<button onclick="addToCart('Cheese Sandwich', 219)">Add to Cart</button>
+<span>₹219</span>
+</div>
+
+<div class="card">
+<h3>Veg Burger</h3>
+<p>Loaded with fresh veggies.</p>
+<button onclick="addToCart('Veg Burger', 249)">Add to Cart</button>
+<span>₹249</span>
+</div>
+
+<div class="card">
+<h3>Pasta Alfredo</h3>
+<p>Creamy Italian white sauce pasta.</p>
+<button onclick="addToCart('Pasta Alfredo', 349)">Add to Cart</button>
+<span>₹349</span>
+</div>
+
+<div class="card">
+<h3>Brownie with Ice Cream</h3>
+<p>Warm brownie topped with vanilla.</p>
+<button onclick="addToCart('Brownie with Ice Cream', 229)">Add to Cart</button>
+<span>₹229</span>
+</div>
+
+<div class="card">
+<h3>Fresh Lime Soda</h3>
+<p>Refreshing summer drink.</p>
+<button onclick="addToCart('Fresh Lime Soda', 129)">Add to Cart</button>
+<span>₹129</span>
+</div>
+
+</div>
+
+</section>
+<section id="cart">
+  <h2>Your Order Cart</h2>
+
+  <div id="cart-items"></div>
+
+  <h3>Total: ₹<span id="cart-total">0</span></h3>
+
+  <button onclick="checkoutOrder()" class="btn">
+    Order on WhatsApp
+  </button>
+  <p class="delivery-note">
+  Orders are confirmed through WhatsApp. Payment can be completed via UPI or Cash on Delivery.
+</p>
+</section>
+<section id="qr-menu">
+
+  <h2>Scan for Full Menu</h2>
+
+  <p>
+    Scan the QR code to view our complete café menu on your phone.
+  </p>
+
+  <img
+    src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://yourwebsite.com/menu"
+    alt="Bean & Bloom Full Menu QR Code"
+    class="qr-code"
+  >
+  <br><br>
+
+  <a href="#menu" class="btn">
+    View Menu Online
+  </a>
+</section>
+
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" alt="Coffee cup">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600" alt="Fresh pastry">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600" alt="Cafe interior">
+    </div>
+  </section>
+
+  <section id="stats">
+
+  <div class="stats-container">
+
+    <div class="stat">
+      <h2>10K+</h2>
+      <p>Happy Customers</p>
+    </div>
+
+    <div class="stat">
+      <h2>25+</h2>
+      <p>Coffee Varieties</p>
+    </div>
+
+    <div class="stat">
+      <h2>5★</h2>
+      <p>Customer Rating</p>
+    </div>
+
+  </div>
+
+</section>
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">
+      <h3>⭐⭐⭐⭐⭐</h3>
+      <p>"Amazing coffee and wonderful atmosphere. A perfect place to relax!"</p>
+      <strong>- Sarah M.</strong>
+    </div>
+
+    <div class="review">
+      <h3>⭐⭐⭐⭐⭐</h3>
+      <p>"My favorite café in town. The pastries are fresh and delicious."</p>
+      <strong>- Daniel R.</strong>
+    </div>
+  </section>
+
+  <section class="reservation">
+    <h2>Reserve Your Table Today</h2>
+
+    <p>
+      Enjoy handcrafted coffee and fresh pastries in a cozy atmosphere.
+    </p>
+
+    <a 
+  href="https://wa.me/9063652749?text=Hello%20Bean%20%26%20Bloom%20Caf%C3%A9%2C%20I%20would%20like%20to%20book%20a%20table."
+  class="btn"
+  target="_blank">
+  Book a Table on WhatsApp
+</a>
+  </section>
+
+  <section id="contact">
+    <h2>Visit Us</h2>
+
+    <div class="contact-container">
+      <div class="contact-card">
+        <h3>Contact Details</h3>
+        <p>Email: hello@beanandbloom.in</p>
+<p>Phone: +91 9063652749</p>
+<p>Address: Jubilee Hills, Hyderabad, Telangana</p>
+
+       <a href="tel:+919876543210" class="contact-btn">Call Now</a>
+        <a href="#location" class="contact-btn">Get Directions</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Opening Hours</h3>
+        <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+        <p>Saturday: 9:00 AM - 9:00 PM</p>
+        <p>Sunday: 9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Find Us</h2>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Jubilee+Hills+Hyderabad+India&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Bean & Bloom Café</h3>
+
+    <p>Follow Us</p>
+
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+
+    <p>© 2026 Bean & Bloom Café. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
